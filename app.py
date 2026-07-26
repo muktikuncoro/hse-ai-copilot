@@ -85,7 +85,7 @@ with tab1:
 
                     # Panggil AI Gemini
                     response = client.models.generate_content(
-                        model='gemini-2.5-flash',
+                        model='gemini-2.0-flash',
                         contents=prompt,
                         config=types.GenerateContentConfig(response_mime_type="application/json")
                     )
@@ -131,7 +131,7 @@ with tab2:
             with st.spinner("AI sedang mencari referensi regulasi & jawaban..."):
                 try:
                     resp = client.models.generate_content(
-                        model='gemini-2.5-flash',
+                        model='gemini-2.0-flash',
                         contents=f"Kamu adalah Senior HSE Specialist berpengalaman. Jawab pertanyaan berikut dengan jelas, rinci, dan sertakan standar/regulasi resmi K3 jika ada: {user_query}"
                     )
                     st.markdown("### Jawaban AI Expert:")
